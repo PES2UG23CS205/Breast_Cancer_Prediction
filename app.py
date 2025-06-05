@@ -23,7 +23,7 @@ def predict():
 
     # prediction
     pred = model.predict(np_features.reshape(1, -1))
-    message = ['Cancrouse' if pred[0] == 1 else 'Not Cancrouse']
+    message = ['Cancer detected' if pred[0] == 1 else 'No cancer detected']
     # print(message[0])
     return render_template('index.html', message=message)
 
